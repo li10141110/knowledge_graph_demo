@@ -56,6 +56,6 @@ def read_edges(frname, fwmang, fwspo, refer, write_mode='a'):
             spo.write("%s\t高管\t%s\trelation\t%s\t%s\n"%(subj, obj, dt, dt))
 
 
-read_nodes('data/company_node.txt', 'data/spo.txt', company_attr)
-read_nodes('data/person_node.txt', 'data/spo.txt', person_attr, 'a')
-read_edges('data/management_edge.txt', 'data/management.txt', 'data/spo.txt', edge_attr)
+read_nodes('company_node.txt', 'spo.txt', company_attr)
+read_nodes('person_node.txt', 'spo.txt', person_attr, 'a')
+read_edges('management_edge.txt', 'management.txt', 'spo.txt', edge_attr)

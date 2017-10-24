@@ -100,6 +100,6 @@ def write_edges(data, header, fname):
         fw.writelines(data)
         
 
-write_company_nodes('Cfi:items', 'data/company_node.txt')
-write_person_nodes('Cninfo:items', 'data/person_node.txt')
-write_edges(edges, edge_header, 'data/management_edge.txt')
+write_company_nodes('Cfi:items', 'company_node.txt')
+write_person_nodes('Cninfo:items', 'person_node.txt')
+write_edges(edges, edge_header, 'management_edge.txt')
