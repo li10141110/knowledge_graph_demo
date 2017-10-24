@@ -3,18 +3,27 @@ This is a demo for a simple knowledge graph. See blog [项目实战--知识图�
 # Repository contents
 
 - **distributed_crawler/:** 
+
   contain files about distributed crawler with scrapy-redis
+
   run from docker: run ``./build.sh`` to build image and ``./run.sh`` to run crawler; results will be stored in your localhost redis server
 
 - **data/:**
+
   run ``python nodes_edges.py`` to generate node and edge file for Neo4j;
+
   run ``python spo.py`` to generate basic file for MySQL/Postgres;
+
   run ``./dump.sh`` to dump files into database
 
 - **visualization/:**
+
   flask server with d3 for visualization;
+
   only designed for MySQL visualization 
+
   run ``python run_server.py`` to start server
+
   check results at ``http://localhost:8080/api/v1?``
 
   ​
@@ -41,6 +50,9 @@ Data is stored in local redis server. Samples are as follow.
 ```
 {"basic_info": {"code": "SZ000661", "title": "长春高新：董事会关于2017年半年度募集资金存放与使用情况的专项报告", "url": "http://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=10000983&gather=1&id=3646359", "text": "长春高新技术产业（集团）股份有限公司\r\n                                               董事会\r\n         关于 2017 年半年度募集资金存放与使用情况的专项报告\r\n               本公司及董事会全体成员保证信息披露的内容真实、准确、完整，没有虚假\r\n       记载、误导性陈述或重大遗漏。\r\n                根据中国证监会发布的《上市公司监管指引第 2 号——上市公司募集资金\r\n       管理和使用的监管要求》和深圳证券交易所颁布的《深圳证券交易所主板上市公\r\n       司规范运作指引》等有关规定，长春高新技术产业（集团）股份有限公司（以下\r\n       简称“公司”或“本公司”）董事会编制了截至 2017 年 6 月 30 日募集资金存放\r\n       与实际使用情况的专项报告。\r\n              ……………… 2017 年 8 月 18 日", "notice_type": "临时公告", "date": "2017-08-18"}}
 ```
+
+
+
 
 # Data
 
@@ -77,9 +89,6 @@ comp3260	pers66	isManagedBy	2017-10-23 19:47:36	2017-10-23 19:47:36	职工监事
 comp3260	pers64	isManagedBy	2017-10-23 19:47:36	2017-10-23 19:47:36	独立董事
 comp2879	pers206	isManagedBy	2017-10-23 19:47:36	2017-10-23 19:47:36	董事
 ```
-
-
-
 
 ## Required file for MySQL/PostgresSQL
 
