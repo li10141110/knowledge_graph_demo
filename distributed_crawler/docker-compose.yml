@@ -1,0 +1,22 @@
+redis:
+  image: redis
+  container_name: redis
+  ports:
+   - "6379:6379" 
+
+
+# splash:
+#   image: splash
+#   container_name: splash
+#   ports:
+#     - “8050:8050”
+
+# scrapinghub/splash
+
+crawler:
+  # build: .
+  image: crawler
+  container_name: crawler
+  command: python run_spider.py -master 1
+  links:
+    - redis:localhost
