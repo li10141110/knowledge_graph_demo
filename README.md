@@ -1,29 +1,20 @@
-This is a demo for a simple knowledge graph. See blog [项目实战--知识图谱初探]([http://www.shuang0420.com/2017/09/05/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98-%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E5%88%9D%E6%8E%A2/](http://www.shuang0420.com/2017/09/05/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98-%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E5%88%9D%E6%8E%A2/)) for detail.
+This is a demo for a simple knowledge graph. See blog [项目实战--知识图谱初探](http://www.shuang0420.com/2017/09/05/%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98-%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E5%88%9D%E6%8E%A2/) for detail.
 
 # Repository contents
 
 - **distributed_crawler/:** 
-
   contain files about distributed crawler with scrapy-redis
-
   run from docker: run ``./build.sh`` to build image and ``./run.sh`` to run crawler; results will be stored in your localhost redis server
 
 - **data/:**
-
   run ``python nodes_edges.py`` to generate node and edge file for Neo4j;
-
   run ``python spo.py`` to generate basic file for MySQL/Postgres;
-
   run ``./dump.sh`` to dump files into database
 
 - **visualization/:**
-
   flask server with d3 for visualization;
-
   only designed for MySQL visualization 
-
   run ``python run_server.py`` to start server
-
   check results at ``http://localhost:8080/api/v1?``
 
   ​
@@ -87,6 +78,9 @@ comp3260	pers64	isManagedBy	2017-10-23 19:47:36	2017-10-23 19:47:36	独立董事
 comp2879	pers206	isManagedBy	2017-10-23 19:47:36	2017-10-23 19:47:36	董事
 ```
 
+
+
+
 ## Required file for MySQL/PostgresSQL
 
 **management.txt**
@@ -108,6 +102,8 @@ comp0	首次注册登记地点	南京市工商行政管理局经济技术开发�
 comp0	证券简称	龙蟠科技	property	2017-10-23 19:48:19	2017-10-23 19:48:19
 comp0	法人代表	石俊峰	property	2017-10-23 19:48:19	2017-10-23 19:48:19
 ```
+
+
 
 # Visualization
 
